@@ -11,4 +11,16 @@
         <PublishAot>true</PublishAot>
     </PropertyGroup>
 
+    <ItemGroup>
+        <None Include="..\_library\bin\Release\_library.lib">
+            <Link>_library.lib</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <DirectPInvoke Include="_library" />
+        <NativeLibrary Include="_library.lib" />
+    </ItemGroup>
+
 </Project>
